@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ANH YÊU TRANG</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/slider.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+      background-color: #ffd1d3;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+		color: #AD1457;
+    }
+ #runaway-btn {
+      position: absolute;
+      padding: 24px 48px;
+      background-color: #ffffff;
+      color: #b71c1c;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    .btn {
+     margin-top: 20px;
+      padding: 24px 48px;
+      font-size: 16px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #e73370;
+    }
+
+    .btn-error {
+      background-color: #ffffff;
+      color: #b71c1c;
+    }
+
+    .btn-error:hover {
+      background-color: #ffffff;
+    }
+  </style>
+	
+</head>
+
+<body >
+	<DIV> <img src="Anh3/anh quan ao/thoitrangnam/images.jpg"</DIV>
+	<DIV ><h1>TRƯỚC KHI TẶNG QUÀ ANH CÓ MỘT CÂU HỎI</h1><BR>
+		<P>EM BÉ CÓ IU ANH HONG Ạ (A HỎI THẾ THÔI CHỨ E KHÔNG THỂ TRẢ LỜI KHÔNG ĐƯỢC HEHE)</P></DIV>
+	
+  <button class="btn btn-primary" onclick="window.location.href='4.html'">
+    ❤️ Có ạ
+  </button>
+
+    <button id="runaway-btn">MƠ ĐI 😏</button>
+
+  <script>
+    function showError() {
+      alert("😏 MƠ ĐI NHÓC");
+    }
+  </script>
+
+ <script>
+    const btn = document.getElementById("runaway-btn");
+
+    function moveButton() {
+      const maxX = window.innerWidth - btn.offsetWidth;
+      const maxY = window.innerHeight - btn.offsetHeight;
+      const newX = Math.random() * maxX;
+      const newY = Math.random() * maxY;
+      btn.style.left = `${newX}px`;
+      btn.style.top = `${newY}px`;
+    }
+
+    // Cho cả chuột và cảm ứng
+    btn.addEventListener("mouseenter", moveButton);
+    btn.addEventListener("touchstart", moveButton);
+  </script>
+
+</body>
+</html>

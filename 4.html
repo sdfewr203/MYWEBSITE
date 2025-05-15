@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ANH YÊU TRANG</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/slider.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+    button {
+      padding: 12px 24px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background-color: #e73370;
+    }
+    .hidden {
+      display: none;
+    }
+    .message {
+      font-size: 18px;
+      color: #c2185b;
+      max-width: 350px;
+      margin: 10px 0;
+    }
+    img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
+    }
+
+    /* Hiệu ứng mờ dần */
+    .fade-out {
+      animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body >
+	
+	<h1 style="color: #ad1457">MÚN QUÀ THÌ ẤN VÔ NÚT NÈ</h1>
+  <button id="startBtn" onclick="startSequence()">NÀY NÈ VỢ</button>
+
+  <div id="first" class="hidden">
+    <img src="Anh3/anh quan ao/thoitrangnam/day-chuyen-vang-tay-nu-1.png" alt="Kỷ niệm" />
+    <p class="message">TADAAAA 💖</p>
+  </div>
+
+  <div id="second" class="hidden">
+    <p class="message">ỦA???</p>
+  </div>
+
+  <div id="third" class="hidden">
+    <p class="message">KHÔNG SAO ĐỂ ANH *BÙM... EM QUAY RA ĐẰNG SAU XEM ĐIIII 💖 </p>
+  </div>
+
+  <script>
+    function fadeOutAndHide(element, callback) {
+      element.classList.add('fade-out');
+      setTimeout(() => {
+        element.classList.add('hidden');
+        element.classList.remove('fade-out');
+        if(callback) callback();
+      }, 1000);
+    }
+
+    function startSequence() {
+      const btn = document.getElementById('startBtn');
+      const first = document.getElementById('first');
+      const second = document.getElementById('second');
+      const third = document.getElementById('third');
+
+      // Ẩn nút ngay khi bấm
+      btn.classList.add('hidden');
+
+      first.classList.remove('hidden');
+
+      setTimeout(() => {
+        fadeOutAndHide(first, () => {
+          second.classList.remove('hidden');
+
+          setTimeout(() => {
+            fadeOutAndHide(second, () => {
+              third.classList.remove('hidden');
+            });
+          }, 1000);
+        });
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

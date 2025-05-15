@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ANH YÊU TRANG</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/slider.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: sans-serif;
+      background-color: #ffe6f0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    img, video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+		 .line {
+      font-size: 1.5rem;
+      opacity: 0;
+      transition: opacity 1s ease;
+      margin: 1rem 0;
+			 color: #AD1457;
+    }
+
+    .show {
+      opacity: 1;
+    } 
+  </style>
+	<style>
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ff4081;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      font-family: sans-serif;
+      user-select: none;
+		
+		transform: translate(20px, 20px);
+    }
+    .btn:hover {
+      background-color: #e73370;
+    }
+  </style>
+	
+</head>
+
+<body >
+	
+	<div  class="content">
+		<h1 style="color: #ad1457">Đôi lời anh muốn gửi đến em pé của anh</h1>
+	</div>
+			<div class="line">💖 365 ngày yêu thương, không dễ nhưng thật xứng đáng.Một năm - hành trình của những yêu thương, những nụ cười và cả những thử thách mà chúng ta cùng vượt qua. Cảm ơn em đã luôn bên cạnh, làm cho mỗi ngày trở nên ý nghĩa hơn. Đây là trang nhỏ, nơi lưu giữ những khoảnh khắc đẹp nhất của chúng ta, để mỗi khi nhớ lại, ta lại mỉm cười và thấy tình yêu vẫn luôn ngọt ngào như ngày đầu, có thể đối với nhiều người tình yêu 1 năm chả xứng đáng để tạo nên một kỷ niệm hay quà cáp nhưng với anh mỗi ngày ở bên em đều là một kỷ niệm anh luôn ghi nhớ sâu trong tim mình!</div>
+  			 <div class="line">🌸 Cảm ơn em vì đã ở lại, ngay cả khi mọi thứ không hoàn hảo. Cảm ơn em vì đã luôn chọn nhau, dù đôi khi cả hai còn vụng về. Anh không cần điều gì ồn ào, chỉ cần chúng ta vẫn nắm tay nhau bình yên như thế, là đủ.
+
+Tình yêu này không phải là những lời hứa quá xa, mà là những khoảnh khắc rất thật – mỗi ngày cùng nhau cố gắng, mỗi lần nhớ nhau đều nói ra, mỗi lần yêu thương đều để đối phương cảm nhận được. Và nếu một năm có thể đẹp như vậy, thì anh tin những năm sau sẽ còn tuyệt vời hơn nữa..</div>
+ 			 <div class="line">🌈 Cảm ơn em – vì đã kiên nhẫn với một người đôi khi hơi khó hiểu, hay cằn nhằn lặt vặt, hoặc không giỏi biểu lộ cảm xúc nhưng lại luôn âm thầm quan tâm. Cảm ơn em vì đã không bỏ chạy khi phát hiện ra anh không hoàn hảo như tưởng tượng (và vẫn chọn chịu đựng cho đến giờ này 😜).
+
+Một năm không đủ dài để nói 'mãi mãi', nhưng đủ để biết tình cảm này không phải nhất thời. Không cần ồn ào, không cần phô trương, chỉ cần vẫn luôn chọn nhau – dù là những ngày bình thường, hay cả những ngày chẳng dễ dàng.
+
+Và nếu em đang đọc những dòng này, thì hãy biết rằng: chúng ta đã đi được một đoạn đường đủ đẹp để tự hào, và đang đi tiếp một con đường mà cả hai đều mong muốn – bằng lòng, bằng yêu, và đôi khi... bằng cả sức mạnh chịu đựng sự cứng đầu dễ thương của nhau. 💕
+
+Chúc cho hành trình này sẽ luôn có thêm nhiều mốc kỷ niệm, nhiều lần cùng nhìn lại và mỉm cười như lúc này – vì hóa ra, yêu đúng người thật sự là một điều may mắn.ANH YÊU EM TRANG</div>
+	
+	<DIV CLASS="line"> Em có muốn anh tặng quà hong nếu mún hãy ấn vào <a href="3.html" style="text-decoration-color: #FFFFFF"> đây </a> nhớ</DIV>
+				
+	<script>
+    const lines = document.querySelectorAll('.line');
+    let index = 0;
+
+    function showNextLine() {
+      if (index < lines.length) {
+        lines[index].classList.add('show');
+        index++;
+        setTimeout(showNextLine, 10000); // mỗi dòng chờ 30 giây
+      }
+    }
+
+    // bắt đầu
+    showNextLine();
+  </script>
+
+</body>
+</html>
