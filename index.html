@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ANH YÊU TRANG</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/slider.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: sans-serif;
+      background-color: #ffe6f0;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    img, video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  </style>
+	<style>
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ff4081;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      font-family: sans-serif;
+      user-select: none;
+		
+		transform: translate(20px, 20px);
+    }
+    .btn:hover {
+      background-color: #e73370;
+    }
+  </style>
+</head>
+
+<body >
+	
+	<div class="heart"></div>
+	<div class="wrapp">
+		<div id="header">
+			
+			<div class="clearfix"></div>
+		</div>
+		<div id="main">
+			<div class="left"><!--bên trái--></div>
+			<div class="right"><!--bên phải-->
+				<table width="100%" border="0" cellspacing="5" cellpadding="5">
+				  <tbody>
+					  <div class="slideshow-container" style="text-align: left; padding-left: 20px">
+						
+								<video autoplay muted loop playsinline>
+    									<source src="Anh3/anh quan ao/thoitrangnam/6103583880711458312 - Trim.mp4" style="" type="video/mp4">
+   										 Trình duyệt của bạn không hỗ trợ video.
+  								</video>
+				  </tbody>
+				</table>
+				<!-- Nút chuyển sang trang khác (thay "page2.html" bằng link bạn muốn) -->
+  						<a href="page2.html" class="btn" >ẤN ZÔ COI ĐỂ ANH CÒN THỂ HIỆN TÌNH CẢM Ạ</a>
+
+			</div>
+		</div>
+		<div id="footer">
+		</div>
+	</div>
+	
+</body>
+	
+	<!--<script>
+      //khai báo biến slideIndex đại diện cho slide hiện tại
+      var slideIndex;
+      // KHai bào hàm hiển thị slide
+      function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+          slides[slideIndex].style.display = "block";  
+          dots[slideIndex].className += " active";
+          //chuyển đến slide tiếp theo
+          slideIndex++;
+          //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+          if (slideIndex > slides.length - 1) {
+            slideIndex = 0
+          }    
+          //tự động chuyển đổi slide sau 5s
+          setTimeout(showSlides, 5000);
+      }
+      //mặc định hiển thị slide đầu tiên 
+      showSlides(slideIndex = 0);
+
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+    </script>00-->
+	<script>
+  // Tạo nhiều trái tim rơi
+  const numberOfHearts = 30;
+
+  for (let i = 0; i < numberOfHearts; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+
+    // Vị trí ngẫu nhiên trái tim
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    heart.style.animationDelay = Math.random() * 5 + 's';
+    heart.style.opacity = Math.random() * 0.5 + 0.5;
+
+    document.body.appendChild(heart);
+  }
+</script>
+</html>
